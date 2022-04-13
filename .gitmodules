@@ -1,0 +1,9 @@
+[submodule "containers/mlflow"]
+	path = containers/mlflow
+	url = https://repo1.dso.mil/dsop/opensource/mlflow/mlflow.git
+[submodule "containers/python38"]
+	path = containers/python38
+	url = https://repo1.dso.mil/dsop/opensource/python/python38.git
+[submodule "containers/ubi8"]
+	path = containers/ubi8
+	url = https://repo1.dso.mil/dsop/redhat/ubi/ubi8.git
