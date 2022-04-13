@@ -59,3 +59,11 @@ Docker will dump an auth file into your user home directory&mdash;`$HOME/.docker
 > _**Beware!**_
 >
 > This file contains your personal credentials for interacting with Iron Bank and _could be used to impersonate you_.  Make sure to keep this file safe!
+
+### 3. Have Docker erase your credentials
+
+Docker will erase your credentials with a command like this:
+
+```sh
+echo "registry1.dso.mil" | docker-credential-desktop erase
+```
