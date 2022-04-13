@@ -38,7 +38,7 @@ Docker desktop is a CLI tool and so needs an automated (read: non-UI) way to log
 
 In order to figure out what your personal "CLI secret" is you first need to log into the Iron Bank Harbor Web UI (as [above](#web-login)).
 
-Then, pop open your "User Profile" and copy down your `Username` and `CLI secret`.
+Then, pop open your "User Profile" and copy down your `Username`.
 
 > _**Take note**_
 >
@@ -46,19 +46,21 @@ Then, pop open your "User Profile" and copy down your `Username` and `CLI secret
 
 &nbsp;
 
-### 2. Configure Docker to use your credentials
+### 2. Have Docker cache your credentials
 
 Once you've pulled your credentials from the Harbor UI, docker can be granted access (in your name!) with a command like this:
 
 ```sh
-docker login "registry1.dso.mil" -u <YOUR_USERNAME> -p <YOUR_CLI_SECRET>
+docker login "registry1.dso.mil" -u <YOUR_USERNAME>
 ```
 
-Docker will dump an auth file into your user home directory&mdash;`$HOME/.docker/config.json`&mdash;in a format that will be familiar to you if you've ever used [docker login](https://docs.docker.com/engine/reference/commandline/login/) before.
+When prompted for your password, copy and paste your "CLI Secret". Docker will dump an auth file into your user home directory&mdash;`$HOME/.docker/config.json`&mdash;in a format that will be familiar to you if you've ever used [docker login](https://docs.docker.com/engine/reference/commandline/login/) before.
 
 > _**Beware!**_
 >
-> This file contains your personal credentials for interacting with Iron Bank and _could be used to impersonate you_.  Make sure to keep this file safe!
+> The configuraitonf file may contain your personal credentials for interacting with Iron Bank and, if so, _could be used to impersonate you_.  Make sure to keep this file safe!
+
+For details of how docker stores your credentials, see the docker [credentials store documentation](https://docs.docker.com/engine/reference/commandline/login/#credentials-store).
 
 ### 3. Have Docker erase your credentials
 
