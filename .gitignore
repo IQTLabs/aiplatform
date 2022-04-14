@@ -1,2 +1,7 @@
 # macOS litter
 .DS_Store
+
+# Emacs litter
+*~
+.dir-locals.el
+.requirements.txt
