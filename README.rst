@@ -4,10 +4,10 @@ AI Assurance Platform
 We are building a platform for data science labs to do work in a manner compliant with AI Assurance standards. It is currently pre-alpha.
 
 
-What It Includes
-~~~~~~~~~~~~~~~~
+What It Currently Includes
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* A preliminary Kubernetes Helm chart for MLFlow.
+* A preliminary Kubernetes Helm chart for [MLFlow](https://www.mlflow.org), an open source tool for managing and auditing the machine learning lifecycle.
 * The Docker containers from DoD Platform One's IronBank for building MLFlow in a hardened manner.
 
 
